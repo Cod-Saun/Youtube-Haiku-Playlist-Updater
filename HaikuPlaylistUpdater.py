@@ -33,11 +33,10 @@ credentials = flow.run_console()
 youtube = googleapiclient.discovery.build(api_service_name, api_version, credentials=credentials)
 
 VidID = ""
-#lines 36-44 adapted from silentsokolov @ https://gist.github.com/silentsokolov/f5981f314bc006c82a41
+#lines 37-45 adapted from silentsokolov @ https://gist.github.com/silentsokolov/f5981f314bc006c82a41
 regex = re.compile(r'(https?://)?(www\.)?(youtube|youtu|youtube-nocookie)\.(com|be)/(watch\?v=|embed/|v/|.+\?v=)?(?P<id>[A-Za-z0-9\-=_]{11})')
 
 for i in range(len(videos)):
-export TEST_API_KEY=ABC123
     match = regex.match(videos[i])
 
     if not match:
