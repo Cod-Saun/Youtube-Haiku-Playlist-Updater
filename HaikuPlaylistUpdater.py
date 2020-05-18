@@ -37,6 +37,7 @@ VidID = ""
 regex = re.compile(r'(https?://)?(www\.)?(youtube|youtu|youtube-nocookie)\.(com|be)/(watch\?v=|embed/|v/|.+\?v=)?(?P<id>[A-Za-z0-9\-=_]{11})')
 
 for i in range(len(videos)):
+export TEST_API_KEY=ABC123
     match = regex.match(videos[i])
 
     if not match:
